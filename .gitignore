@@ -9,9 +9,12 @@ gen/
 node_modules/
 target/
 
+
 # Web IDE, App Studio
 .che/
 .gen/
+
+.env
 
 # MTA
 *_mta_build_tmp
@@ -37,3 +40,4 @@ mta_archives/
 build/ui-deployer/
 build/dist/
 env/
+

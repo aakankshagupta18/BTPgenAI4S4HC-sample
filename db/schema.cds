@@ -1,5 +1,7 @@
 namespace aakankshagupta_ds1_a29;
 
+using { S4HCP_ServiceOrder_Odata } from '../srv/external/S4HCP_ServiceOrder_Odata.cds';
+
 using { cuid } from '@sap/cds/common';
 
 entity CustomerMessage : cuid
@@ -21,4 +23,5 @@ entity CustomerMessage : cuid
     fullMessageEnglish : String(2000);
     suggestedResponseEnglish : String(2000);
     suggestedResponseCustomerLanguage : String(2000);
+    S4HC_ServiceOrder : Association to one S4HCP_ServiceOrder_Odata.A_ServiceOrder;
 }
