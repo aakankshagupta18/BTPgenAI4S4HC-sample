@@ -12,8 +12,8 @@ entity CustomerMessage : cuid
     messageUrgency : String(100);
     messageSentiment : String(100);
     titleCustomerLanguage : String(100);
-    customerId : String(36);
-    productId : String(36);
+    customerId : String(100);
+    productId : String(100);
     summaryCustomerLanguage : String(500);
     originatingCountry : String(100);
     sourceLanguage : String(100);
