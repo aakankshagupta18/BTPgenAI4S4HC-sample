@@ -69,11 +69,11 @@ annotate service.CustomerMessage with @(
             },
             {
                 $Type : 'UI.DataField',
-                Value : suggestedResponseEnglish,
+                Value : suggestedResponseCustomerLanguage,
             },
             {
                 $Type : 'UI.DataField',
-                Value : suggestedResponseCustomerLanguage,
+                Value : suggestedResponseEnglish,
             },
             {
                 $Type : 'UI.DataField',
@@ -104,9 +104,17 @@ annotate service.A_ServiceOrder with {
         ![@UI.TextArrangement] : #TextSeparate,
     }
 };
-annotate service.CustomerMessage with {
-    S4HC_ServiceOrder @Common.Text : {
-            $value : S4HC_ServiceOrder.ServiceOrder,
-            ![@UI.TextArrangement] : #TextSeparate,
-        }
-};
+annotate service.CustomerMessage with @(
+    UI.Identification : [
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'aakankshagupta_ds1_a29Srv.Action1',
+            Label : 'Generate Reply',
+        },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'aakankshagupta_ds1_a29Srv.Action2',
+            Label : 'Maintain SO',
+        },
+    ]
+);

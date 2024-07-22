@@ -7,27 +7,37 @@ service aakankshagupta_ds1_a29Srv
 {
     @odata.draft.enabled
     entity CustomerMessage as
-        projection on my.CustomerMessage;
+        projection on my.CustomerMessage
+        actions
+        {
+            action Action1
+            (
+            );
 
-    entity A_ServiceOrder as projection on S4HCP_ServiceOrder_Odata.A_ServiceOrder
-    {
-        ServiceOrder,
-        ServiceOrderDescription
-    };
+            action Action2
+            (
+            );
+        };
+
+    entity A_ServiceOrder as
+        projection on S4HCP_ServiceOrder_Odata.A_ServiceOrder
+        {
+            ServiceOrder,
+            ServiceOrderDescription
+        };
 
     @odata.draft.enabled
-    entity ProductFAQ as projection on my.ProductFAQ
-    {
-        ID,
-        issue,
-        question,
-        answer
-    };
-
+    entity ProductFAQ as
+        projection on my.ProductFAQ
+        {
+            ID,
+            issue,
+            question,
+            answer
+        };
 }
 
 annotate aakankshagupta_ds1_a29Srv with @requires :
 [
     'authenticated-user'
 ];
-

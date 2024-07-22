@@ -1,6 +1,7 @@
 const lLMProxy = require('./utils/genAIHubProxyDirect');
 const utils = require('./utils/utils');
 const LOG = cds.log('GenAI');
+
 /**
  * 
  * @After(event = { "CREATE","UPDATE" }, entity = "aakankshagupta_ds1_a29Srv.ProductFAQ")
@@ -9,6 +10,7 @@ const LOG = cds.log('GenAI');
 */
 module.exports = async function(results, request) {
 	// Your code here
+
 	try {
 		// Extract the customer message ID from the request parameters
 		const productFAQID = request.data.ID;
