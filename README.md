@@ -1,8 +1,10 @@
 # Getting Started
 
-Welcome to your new project.
-
-It contains these folders and files, following our recommended project layout:
+Project Features:
+1. Detects the sentiment of the message using open-source llm models and assign it a priority.
+2. Summarizes the customer customer.
+3. Generates a automated reply.
+4. Creates a ServiceOrder in the backend related to the query.
 
 File or Folder | Purpose
 ---------|----------
