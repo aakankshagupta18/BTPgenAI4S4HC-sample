@@ -30,7 +30,8 @@
     "start-local": "npm run generate-entry-point && npm run cds-watch",
     "generate-entry-point": "dev-cap-tools gen-entrypoint",
     "cds-watch": "cds watch --open",
-    "watch-aakankshagupta_ds1_a29.CustomerMessages": "cds watch --open aakankshagupta_ds1_a29.CustomerMessages/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-aakankshagupta_ds1_a29.CustomerMessages": "cds watch --open aakankshagupta_ds1_a29.CustomerMessages/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-aakankshagupta_ds1_a29.ProductFAQApp": "cds watch --open aakankshagupta_ds1_a29.ProductFAQApp/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "requires": {
@@ -51,7 +52,7 @@
       },
       "S4HCP_ServiceOrder_Odata": {
         "kind": "odata-v2",
-        "csrf" : true,
+        "csrf": true,
         "csrfInBatch": true,
         "model": "srv/external/S4HCP_ServiceOrder_Odata",
         "[production]": {
@@ -67,6 +68,7 @@
   },
   "lcap": true,
   "sapux": [
-    "app/aakankshagupta_ds1_a29.CustomerMessages"
+    "app/aakankshagupta_ds1_a29.CustomerMessages",
+    "app/aakankshagupta_ds1_a29.ProductFAQApp"
   ]
 }

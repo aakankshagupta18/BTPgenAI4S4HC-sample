@@ -1,10 +1,10 @@
 using { aakankshagupta_ds1_a29Srv } from '../srv/service.cds';
 
-annotate aakankshagupta_ds1_a29Srv.CustomerMessage with @UI.HeaderInfo: { TypeName: 'Customer Message', TypeNamePlural: 'Customer Messages', Title: { Value: customerMessageID } };
-annotate aakankshagupta_ds1_a29Srv.CustomerMessage with {
-  ID @UI.Hidden @Common.Text: { $value: customerMessageID, ![@UI.TextArrangement]: #TextOnly }
-};
-annotate aakankshagupta_ds1_a29Srv.CustomerMessage with @UI.Identification: [{ Value: customerMessageID }];
+// annotate aakankshagupta_ds1_a29Srv.CustomerMessage with @UI.HeaderInfo: { TypeName: 'Customer Message', TypeNamePlural: 'Customer Messages', Title: { Value: customerMessageID } };
+// annotate aakankshagupta_ds1_a29Srv.CustomerMessage with {
+//   ID @UI.Hidden @Common.Text: { $value: customerMessageID, ![@UI.TextArrangement]: #TextOnly }
+// };
+// annotate aakankshagupta_ds1_a29Srv.CustomerMessage with @UI.Identification: [{ Value: customerMessageID }];
 annotate aakankshagupta_ds1_a29Srv.CustomerMessage with @UI.DataPoint #titleEnglish: {
   Value: titleEnglish,
   Title: 'Title (English)',
@@ -18,7 +18,7 @@ annotate aakankshagupta_ds1_a29Srv.CustomerMessage with @UI.DataPoint #productNa
   Title: 'Product Name',
 };
 annotate aakankshagupta_ds1_a29Srv.CustomerMessage with {
-  customerMessageID @title: 'ID';
+  // customerMessageID @title: 'ID';
   titleEnglish @title: 'Title (English)';
   customerName @title: 'Customer Name';
   productName @title: 'Product Name';
@@ -39,7 +39,7 @@ annotate aakankshagupta_ds1_a29Srv.CustomerMessage with {
 };
 
 annotate aakankshagupta_ds1_a29Srv.CustomerMessage with @UI.LineItem: [
-    { $Type: 'UI.DataField', Value: customerMessageID },
+    // { $Type: 'UI.DataField', Value: customerMessageID },
     { $Type: 'UI.DataField', Value: titleEnglish },
     { $Type: 'UI.DataField', Value: customerName },
     { $Type: 'UI.DataField', Value: productName },
@@ -61,7 +61,7 @@ annotate aakankshagupta_ds1_a29Srv.CustomerMessage with @UI.LineItem: [
 
 annotate aakankshagupta_ds1_a29Srv.CustomerMessage with @UI.FieldGroup #Main: {
   $Type: 'UI.FieldGroupType', Data: [
-    { $Type: 'UI.DataField', Value: customerMessageID },
+    // { $Type: 'UI.DataField', Value: customerMessageID },
     { $Type: 'UI.DataField', Value: titleEnglish },
     { $Type: 'UI.DataField', Value: customerName },
     { $Type: 'UI.DataField', Value: productName },
@@ -92,7 +92,7 @@ annotate aakankshagupta_ds1_a29Srv.CustomerMessage with @UI.Facets: [
   { $Type: 'UI.ReferenceFacet', ID: 'Main', Label: 'General Information', Target: '@UI.FieldGroup#Main' }
 ];
 
-annotate aakankshagupta_ds1_a29Srv.CustomerMessage with @UI.SelectionFields: [
-  customerMessageID
-];
+// annotate aakankshagupta_ds1_a29Srv.CustomerMessage with @UI.SelectionFields: [
+//   customerMessageID
+// ];
 

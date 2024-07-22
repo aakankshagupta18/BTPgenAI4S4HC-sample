@@ -14,9 +14,20 @@ service aakankshagupta_ds1_a29Srv
         ServiceOrder,
         ServiceOrderDescription
     };
+
+    @odata.draft.enabled
+    entity ProductFAQ as projection on my.ProductFAQ
+    {
+        ID,
+        issue,
+        question,
+        answer
+    };
+
 }
 
 annotate aakankshagupta_ds1_a29Srv with @requires :
 [
     'authenticated-user'
 ];
+
